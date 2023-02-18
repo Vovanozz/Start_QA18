@@ -4,7 +4,7 @@ public class Calculator {
 
 int a,b;
 char action;
-String res;
+
 public static void CalculatorPrint(){
     System.out.println("This is a calculator");
 }
@@ -14,7 +14,7 @@ public double calc(int a, int b, char action){
     {
         case '+':res=a+b;break;
         case '-':res=a-b;break;
-        case '*':res=b*b;break;
+        case '*':res=a*b;break;
         case '/':
             if (b!=0)
                 res=a/b;
