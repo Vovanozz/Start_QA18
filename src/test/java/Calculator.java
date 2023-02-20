@@ -5,11 +5,11 @@ public class Calculator {
 public static void PrintCalc(){
     System.out.println("This is a calculator");
 }
-public double calc(int a, int b, char action) {
-    double res = 0;
+public void calc(int a, int b, char action) {
+    double res=0;
     switch (action) {
         case '+':
-            res = a + b;
+           res=  a + b;
             break;
         case '-':
             res = a - b;
@@ -25,8 +25,25 @@ public double calc(int a, int b, char action) {
         default:
             System.out.println("Error:wrong action");
 
+
     }
-    return res;
-}
+    System.out.println("Result="+res);
 
 }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
