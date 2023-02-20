@@ -1,15 +1,15 @@
-
-
 public class Calculator {
 
 public static void PrintCalc(){
     System.out.println("This is a calculator");
 }
-public void calc(double a, double b, char action) {
+public void calc(int a, int b, char action) {
     String res=null;
+
     switch (action) {
         case '+':
-           res= String.valueOf((a + b));
+
+            res= String.valueOf((a + b));
             break;
         case '-':
             res = String.valueOf((a - b));
@@ -34,16 +34,3 @@ public void calc(double a, double b, char action) {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
