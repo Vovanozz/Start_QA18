@@ -5,21 +5,21 @@ public class Calculator {
 public static void PrintCalc(){
     System.out.println("This is a calculator");
 }
-public void calc(int a, int b, char action) {
-    double res=0;
+public void calc(double a, double b, char action) {
+    String res=null;
     switch (action) {
         case '+':
-           res=  a + b;
+           res= String.valueOf((a + b));
             break;
         case '-':
-            res = a - b;
+            res = String.valueOf((a - b));
             break;
         case '*':
-            res = a * b;
+            res = String.valueOf((a * b));
             break;
         case '/':
             if (b != 0)
-                res = a / b;
+                res = String.valueOf((a / b));
             else System.out.println("Error:division by ZERO");
             break;
         default:

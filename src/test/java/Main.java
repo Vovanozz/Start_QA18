@@ -6,7 +6,7 @@ public class Main {
         Calculator.PrintCalc();
         Calculator calc;
         calc = new Calculator();
-        calc.calc(6,6,'*');
+        calc.calc( 6.6,  6,'*');
     }
 }
 
