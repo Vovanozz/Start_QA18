@@ -21,42 +21,44 @@ public class SeleniumStart {
         wd.navigate().to("https://telranedu.web.app/home");
        // wd.navigate().forward();
        // wd.navigate().back();
-        
+
     }
-
     @Test
-    public void findElement(){
-        WebElement element = wd.findElement(By.tagName("a"));
-        List<WebElement> elements = wd.findElements(By.tagName("a"));
-        System.out.println(elements.size());
-        WebElement div = wd.findElement(By.tagName("div"));
-        List<WebElement> divList = wd.findElements(By.tagName("div"));
-        System.out.println(divList.size());
-        WebElement h1 = wd.findElement(By.tagName("h1"));
-        WebElement h2 = wd.findElement(By.tagName("h2"));
-        WebElement h3 = wd.findElement(By.tagName("h3"));
-        List<WebElement> h1List = wd.findElements(By.tagName("h1"));
-        System.out.println(h1List.size());
+    public void findElementsOnPage(){
 
-        WebElement home = wd.findElement(By.linkText("HOME"));
-       System.out.println(home.getAttribute("href"));
-        WebElement about = wd.findElement(By.linkText("ABOUT"));
-        System.out.println(about.getAttribute("href"));
+        wd.findElement(By.className("container"));
+        wd.findElement(By.className("navbar-component_nav__1X_4m"));
+        wd.findElement(By.className("active"));
+        wd.findElement(By.tagName("form"));
+        WebElement email = wd.findElement(By.name("email"));
+        WebElement password = wd.findElement(By.name("password"));
+        List<WebElement> buttonList = wd.findElements(By.tagName("button"));
+        WebElement buttonEl=buttonList.get(0);
+        WebElement buttonEl1=buttonList.get(1);
+        List<WebElement> inputList = wd.findElements(By.tagName("input"));
+        WebElement inputEl=inputList.get(0);
+        WebElement inputEl1=inputList.get(1);
         WebElement login = wd.findElement(By.linkText("LOGIN"));
         System.out.println(login.getAttribute("href"));
-
-        WebElement partialTextLogin = wd.findElement(By.partialLinkText("LOG"));
-        WebElement partialTextAbout = wd.findElement(By.partialLinkText("ABO"));
-        WebElement partialTextHome = wd.findElement(By.partialLinkText("HO"));
-
-        WebElement root = wd.findElement(By.id("root"));
-        WebElement container = wd.findElement(By.className("container"));
-        WebElement active = wd.findElement(By.className("active"));
-        WebElement element1 = wd.findElement(By.className("navbar-component_nav__1X_4m"));
-
-
+        wd.findElement(By.partialLinkText("LOG"));
+        WebElement about = wd.findElement(By.linkText("ABOUT"));
+        WebElement home = wd.findElement(By.linkText("HOME"));
+        wd.findElement(By.partialLinkText("ABO"));
+        wd.findElement(By.partialLinkText("HO"));
+        List<WebElement> divList = wd.findElements(By.tagName("div"));
+        System.out.println(divList.size());
+        wd.findElement(By.id("root"));
+        List<WebElement> h1List = wd.findElements(By.tagName("h1"));
+        System.out.println(h1List.size());
+         wd.findElement(By.tagName("h2"));
+         wd.findElement(By.tagName("h3"));
 
     }
+
+
+
+
+
 
 
     @AfterMethod
