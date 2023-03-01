@@ -26,42 +26,68 @@ public class SeleniumStart {
     @Test
     public void findElementsOnPage(){
 
-         wd.findElement(By.cssSelector(".container"));
+       wd.findElement(By.xpath("//h1"));
+        List<WebElement> elementsDiv = wd.findElements(By.xpath("//div"));
+        System.out.println(elementsDiv.size());
+        List<WebElement> elementsA = wd.findElements(By.xpath("//div/a"));
+        System.out.println(elementsA.size());
+
+        wd.findElement(By.cssSelector(".container"));
+        wd.findElement(By.xpath("//*[@class='container']"));
          wd.findElement(By.cssSelector("div.login_login__3EHKB"));
-        wd.findElement(By.cssSelector("[class^='cont']"));
-        wd.findElement(By.cssSelector("[class$='iner']"));
-       wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
-       wd.findElement(By.cssSelector("[class='navbar-component_nav__1X_4m']"));
-       wd.findElement(By.cssSelector("[class^='navb']"));
-       wd.findElement(By.cssSelector("[class*='navbar-component']"));
+        wd.findElement(By.xpath("//div[@class='login_login__3EHKB']"));
+        wd.findElement(By.cssSelector("#root"));
+        wd.findElement(By.cssSelector("div#root"));
+        wd.findElement(By.xpath("//div[@id='root']"));
+        wd.findElement(By.xpath("//*[contains(@id,'root')]"));
+        wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
+        wd.findElement(By.cssSelector("[class='navbar-component_nav__1X_4m']"));
+        wd.findElement(By.xpath("//*[@class='navbar-component_nav__1X_4m']"));
+        wd.findElement(By.xpath("//*[contains(@class,'navbar-component_nav__1X_4m')]"));
        wd.findElement(By.cssSelector(".active"));
-       wd.findElement(By.cssSelector("[class^='act']"));
-       wd.findElement(By.cssSelector("[class$='tive']"));
-        wd.findElement(By.cssSelector("[href='/login']"));
+        wd.findElement(By.xpath("//a[@class='active']"));
+        wd.findElement(By.xpath("//a[@aria-current='page']"));
 
-         wd.findElement(By.cssSelector("input[placeholder='Email']"));
-        wd.findElement(By.cssSelector("[name='email']"));
-         wd.findElement(By.cssSelector("[name^='ema']"));
+
+         wd.findElement(By.cssSelector("[href='/login']"));
+        wd.findElement(By.xpath("//a[@href='/login']"));
+        wd.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/a[3]"));
+
+        wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        wd.findElement(By.xpath("//input[@placeholder='Email']"));
+        wd.findElement(By.xpath("//input[@name='email']"));
+        wd.findElement(By.xpath("//*[contains(@name,'email')]"));
+
+
          wd.findElement(By.cssSelector("input[placeholder='Password']"));
+        wd.findElement(By.xpath("//*[contains(@placeholder,'Password')]"));
+        wd.findElement(By.xpath("//input[@placeholder='Password']"));
+        wd.findElement(By.xpath("//input[last()]"));
+        wd.findElement(By.xpath("//input[position()=1]"));
+        wd.findElement(By.xpath("//input[position()=2]"));
          wd.findElement(By.cssSelector("[name*='password']"));
-         wd.findElement(By.cssSelector("input[name$='word']"));
+        wd.findElement(By.xpath("//input[@name='password']"));
 
-         wd.findElement(By.cssSelector("button[name='login']"));
-         wd.findElement(By.cssSelector("[name^='log']"));
-         wd.findElement(By.cssSelector("[name$=gin]"));
-         wd.findElement(By.cssSelector("button[name='registration']"));
-         wd.findElement(By.cssSelector("[name^='regis']"));
-         wd.findElement(By.cssSelector("[name$='ation']"));
-         wd.findElement(By.cssSelector("a[href='/home']"));
-         wd.findElement(By.cssSelector("a[href='/about']"));
-         wd.findElement(By.cssSelector("a[href^='/abo']"));
-         wd.findElement(By.cssSelector("[href$='out']"));
-         wd.findElement(By.cssSelector("div#root"));
-        wd.findElements(By.cssSelector("div[class='login_login__3EHKB'] >form>button:last-child"));
-        wd.findElements(By.cssSelector("div[class='login_login__3EHKB'] >form>button:first-child"));
+        wd.findElement(By.cssSelector("button[name='login']"));
+        wd.findElement(By.cssSelector("button[name='registration']"));
+        wd.findElement(By.xpath("//div[@class='login_login__3EHKB']//form/button[1]"));
+        wd.findElement(By.xpath("//form/button[1]"));
+        wd.findElement(By.xpath("//form/button[2]"));
+        wd.findElement(By.xpath("//form/button[.='Login']"));
+        wd.findElement(By.xpath("//button[contains(.,'Login')]"));
+        wd.findElement(By.xpath("//button[@type='submit'][1]"));
+        wd.findElement(By.xpath("//button[@type='submit'][2]"));
+        wd.findElement(By.xpath("//button[@name='registration']"));
 
-        List<WebElement> elements = wd.findElements(By.cssSelector("div h1"));
-        System.out.println("result="+elements.size());
+
+        wd.findElement(By.cssSelector("a[href='/home']"));
+        wd.findElement(By.cssSelector("a[href='/about']"));
+        wd.findElements(By.xpath("//a[@href='/home']"));
+        wd.findElements(By.xpath("//a[@href='/about']"));
+        wd.findElements(By.xpath("//a[contains(.,'HOME')]"));
+        wd.findElements(By.xpath("//a[contains(.,'ABOUT')]"));
+        wd.findElement(By.xpath("//a[text()='LOGIN']"));
+
 
     }
 

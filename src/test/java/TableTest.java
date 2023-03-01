@@ -23,21 +23,26 @@ public class TableTest {
 
 
     @Test
-    public void testTable(){
-        List<WebElement> elements = wd.findElements(By.cssSelector("#customers tr"));
-        System.out.println("amount of table rows is:"+elements.size());
+    public void testTableCss(){
+        List<WebElement> elementsTR = wd.findElements(By.cssSelector("#customers tr"));
+        System.out.println("amount of table rows is:"+elementsTR.size());
         List<WebElement> tableColumns = wd.findElements(By.cssSelector("#customers tr th"));
         System.out.println("table columns is:"+tableColumns.size());
-        WebElement elementRow3 = wd.findElement(By.cssSelector("#customers tr:nth-child(4)"));
+        WebElement elementRow3 = wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
         System.out.println(elementRow3.getText());
-        WebElement elementLastColumpRow3 = wd.findElement(By.cssSelector("#customers tr:nth-child(4) td:last-child"));
+        WebElement elementLastColumpRow3 = wd.findElement(By.cssSelector("#customers tr:nth-child(3) td:last-child"));
         System.out.println(elementLastColumpRow3.getText());
+
+
+
+
+
 
 
     }
     @AfterMethod
     public void postCondition(){
 
-        wd.quit();
+       // wd.quit();
     }
 }
